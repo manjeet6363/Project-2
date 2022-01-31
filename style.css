@@ -1,0 +1,66 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  margin: 100px 400px;
+  padding: 20px 100px;
+  border-radius: 20px;
+  background-image: url("https://21mbu63kam0h2kj3iy24qk18-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/iStock-916563360.jpg");
+  background-size: cover;
+}
+.formContainer:hover {
+  box-shadow: 20px 20px 16px 20px #f1efef;
+}
+.formfields {
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+}
+.label {
+  text-align: end;
+  padding: 3px;
+  flex: 2;
+  font-weight: 500;
+  font-size: 20px;
+}
+.input {
+  padding: 3px;
+  margin-left: 10px;
+  margin-right: 70px;
+  flex: 3;
+  background-color: inherit;
+  font-size: 20px;
+}
+
+.button {
+  width: 40%;
+  font-size: 30px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background-color: lightblue;
+}
+.button:hover {
+  color: white;
+  background-color: black;
+}
+
+.heading {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.result {
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px){
+  .formContainer{
+    margin: 0%;
+    padding: 0%;
+  }
+}
