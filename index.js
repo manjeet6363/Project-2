@@ -1,16 +1,15 @@
 function Calculate() {
-    var userinput = document.getElementById('dob').value;
-var DOB = new Date(userinput);
-if(userinput ===null || userinput ===''){
-    document.getElementById('result').innerText = 'Please choose a date';
+let userInput = document.getElementById('dob').value;
+let userInput2 = document.getElementById('newDate').value;
+let dobYear = new Date(userInput).getFullYear();
+let currentYear = new Date(userInput2).getFullYear();
+if(userInput==null || userInput==='' || userInput2==null || userInput2===''){
+    document.getElementById('result').innerText = 'Please select both date first';
     document.getElementById('result').style.color = 'white';
     return false;
 }
-var monthDiff = Date.now()-DOB.getTime();
-var ageDate = new Date(monthDiff);
-var year = ageDate.getUTCFullYear();
-var age = Math.abs(year - 1970);
+let ageDiff = currentYear-dobYear;
 
 document.getElementById('result').style.color = 'yellow';
-return document.getElementById('result').innerText = 'You are '+ age+ ' years old.';
+return document.getElementById('result').innerText = "You are "+ageDiff+" years old.";
 }
