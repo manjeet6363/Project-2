@@ -1,15 +1,21 @@
-function Calculate() {
-let userInput = document.getElementById('dob').value;
-let userInput2 = document.getElementById('newDate').value;
-let dobYear = new Date(userInput).getFullYear();
-let currentYear = new Date(userInput2).getFullYear();
-if(userInput==null || userInput==='' || userInput2==null || userInput2===''){
-    document.getElementById('result').innerText = 'Please select both date first';
-    document.getElementById('result').style.color = 'white';
-    return false;
-}
-let ageDiff = currentYear-dobYear;
 
-document.getElementById('result').style.color = 'yellow';
-return document.getElementById('result').innerText = "You are "+ageDiff+" years old.";
+function Calculate(){
+    let userInput = document.getElementById('dob').value; 
+    let dobYear = new Date(userInput).getFullYear(); 
+    let currentYear = new Date(Date.now()).getFullYear();
+    let ageDiff = currentYear - dobYear;
+    if(userInput==null || userInput===''){
+        document.getElementById('result').innerText = "Please select your date of birth";
+        document.getElementById('result').style.color = 'blue';
+        return false;
+    }
+    if(ageDiff<0){
+        document.getElementById('result').innerText = "Please choose a valid date";
+        document.getElementById('result').style.color = 'green';
+        return false;
+    }
+    
+    document.getElementById('result').style.color = 'yellow';
+    document.getElementById('result').innerText = "You are "+ageDiff+ " year old.";
+    return false;
 }
